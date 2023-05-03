@@ -25,9 +25,12 @@ C_INCLUDE_PATH="/home/[current_user]/c_headers:$C_INCLUDE_PATH"
 > C_INCLUDE_PATH="/home/[current_user]/c_headers"
 > ```
 
+Or we can just move `caspp.h` to `/usr/local/include`, which is much more easier
+> never add header files in `/usr/include` !!!
+
 ## static linking
 
-* complie `csapp.c`, get linkable object file `csapp.o`
+* complie `csapp.c` to get linkable object file `csapp.o`
   ```shell
   $ gcc -c -o csapp.o csapp.c
   ```
@@ -35,6 +38,10 @@ C_INCLUDE_PATH="/home/[current_user]/c_headers:$C_INCLUDE_PATH"
   ```shell
   $ gcc -o test test.c csapp.o -lpthread 
   ```
+
+  static linking is simple but not elegant: 
+  * we need csapp.o placed in project directory
+  * we need flag `-lpthread` to finish linking
 
 ## dynamic linking
 
