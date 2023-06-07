@@ -4,8 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}",
-                "/home/buzz/c_headers"
+                "/usr/local/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

@@ -61,7 +61,20 @@ Or we can just move `caspp.h` to `/usr/local/include`, which is much more easier
   ```shell
   $ ldconfig /usr/local/bin
   ```
-* complie source code just by flag `-lcsapp`(without copying `libcsapp.so` into project directory!)
+
+## test with a demo
+
+complie source code just by flag `-lcsapp`(without copying `libcsapp.so` into project directory!)
   ```shell
-  $ gcc -o test test.c -lcsapp
+  $ gcc -o test test.c -lcsapp && cat test.txt
+  this is a test messsage
   ```
+
+there will be a message on the screen: "this is a test messsage" !!!
+
+
+## makefile will handle all
+
+```shell
+$ make all
+```
